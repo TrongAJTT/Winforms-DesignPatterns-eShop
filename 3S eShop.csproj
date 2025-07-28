@@ -1,0 +1,1440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20D27182-941F-4533-92C5-8A3C9C2010BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>_3S_eShop</RootNamespace>
+    <AssemblyName>3S eShop</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Cipher3S, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Utilities\Cipher3S.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetEnv, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetEnv.2.5.0\lib\netstandard1.3\DotNetEnv.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.69.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.1.69.0\lib\net462\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.69.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Auth.1.69.0\lib\net462\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.69.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Core.1.69.0\lib\net462\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v3, Version=1.69.0.3703, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Drive.v3.1.69.0.3703\lib\net462\Google.Apis.Drive.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Locker, Version=0.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\lockersm.0.0.3\lib\net461\Locker.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.3\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=9.0.0.3, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.9.0.3\lib\net462\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=9.0.0.3, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Abstractions.9.0.3\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=9.0.0.3, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Primitives.9.0.3\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.9.2.0\lib\net48\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Pipelines.Sockets.Unofficial, Version=1.0.0.0, Culture=neutral, PublicKeyToken=42ea0a778e13fbe2, processorArchitecture=MSIL">
+      <HintPath>packages\Pipelines.Sockets.Unofficial.2.2.8\lib\net472\Pipelines.Sockets.Unofficial.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Sprache, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Sprache.2.3.1\lib\net45\Sprache.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46, processorArchitecture=MSIL">
+      <HintPath>packages\StackExchange.Redis.2.8.24\lib\net472\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.Tracing.4.3.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.AccessControl.5.0.0\lib\net461\System.IO.FileSystem.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.9.0.2\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.Extensions.4.3.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.4.3.0\lib\net463\System.Runtime.InteropServices.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.6.0.1\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.9.0.2\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.9.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=9.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Channels.9.0.3\lib\net462\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\CartProductBLL.cs" />
+    <Compile Include="BLL\CategoryBLL.cs" />
+    <Compile Include="BLL\CouponBLL.cs" />
+    <Compile Include="BLL\CustomerChatBLL.cs" />
+    <Compile Include="BLL\DTOs\BaseDTO.cs" />
+    <Compile Include="BLL\BrandBLL.cs" />
+    <Compile Include="BLL\DTOs\BrandDTO.cs" />
+    <Compile Include="BLL\DTOs\CartProductDTO.cs" />
+    <Compile Include="BLL\DTOs\CategoryDTO.cs" />
+    <Compile Include="BLL\DTOs\CouponDTO.cs" />
+    <Compile Include="BLL\DTOs\CustomerChatDTO.cs" />
+    <Compile Include="BLL\DTOs\DiscountDTO.cs" />
+    <Compile Include="BLL\DTOs\MessageDTO.cs" />
+    <Compile Include="BLL\DTOs\OrderDTO.cs" />
+    <Compile Include="BLL\DTOs\OrderLogDTO.cs" />
+    <Compile Include="BLL\DTOs\OrderProductDTO.cs" />
+    <Compile Include="BLL\DTOs\PaymentDTO.cs" />
+    <Compile Include="BLL\DTOs\ProductDTO.cs" />
+    <Compile Include="BLL\DTOs\ProductVariantDiscountDTO.cs" />
+    <Compile Include="BLL\DTOs\ProductVariantDTO.cs" />
+    <Compile Include="BLL\DTOs\RewardPointDTO.cs" />
+    <Compile Include="BLL\DTOs\RoleDTO.cs" />
+    <Compile Include="BLL\DTOs\UserAddressDTO.cs" />
+    <Compile Include="BLL\DTOs\UserDTO.cs" />
+    <Compile Include="BLL\DTOs\UserReviewDTO.cs" />
+    <Compile Include="BLL\DTOs\ViewModel\BannerObject.cs" />
+    <Compile Include="BLL\DTOs\ViewModel\CartItem.cs" />
+    <Compile Include="BLL\DTOs\ViewModel\CategoryView.cs" />
+    <Compile Include="BLL\DTOs\ViewModel\City.cs" />
+    <Compile Include="BLL\DTOs\ViewModel\District.cs" />
+    <Compile Include="BLL\DTOs\ViewModel\Ward.cs" />
+    <Compile Include="BLL\MessageBLL.cs" />
+    <Compile Include="BLL\OrderBLL.cs" />
+    <Compile Include="BLL\OrderLogBLL.cs" />
+    <Compile Include="BLL\OrderProductBLL.cs" />
+    <Compile Include="BLL\PaymentBLL.cs" />
+    <Compile Include="BLL\ProductBLL.cs" />
+    <Compile Include="BLL\ProductImageBLL.cs" />
+    <Compile Include="BLL\ProductVariantBLL.cs" />
+    <Compile Include="BLL\ProductVariantDiscountBLL.cs" />
+    <Compile Include="BLL\RewardPointBLL.cs" />
+    <Compile Include="BLL\RoleBLL.cs" />
+    <Compile Include="BLL\UserAddressBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="BLL\UserReviewBLL.cs" />
+    <Compile Include="CustomControls\AlikeTableLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\OrderPriceDetailControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\OrderPriceDetailControl.Designer.cs">
+      <DependentUpon>OrderPriceDetailControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\ProductVariantPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\ProductVariantPicker.Designer.cs">
+      <DependentUpon>ProductVariantPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\CartControlComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\CartControlComponent.Designer.cs">
+      <DependentUpon>CartControlComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ChatController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ChatController.Designer.cs">
+      <DependentUpon>ChatController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\BannerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\BannerControl.Designer.cs">
+      <DependentUpon>BannerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\BannerSubControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\BannerSubControl.Designer.cs">
+      <DependentUpon>BannerSubControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\CardSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\CardSlider.Designer.cs">
+      <DependentUpon>CardSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\RoundedLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ToastBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ToastBox.Designer.cs">
+      <DependentUpon>ToastBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\RoundedFlowLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\RoundedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\DAOs\MessageDAO.cs" />
+    <Compile Include="DAL\DAOs\OrderDAO.cs" />
+    <Compile Include="DAL\DAOs\OrderLogDAO.cs" />
+    <Compile Include="DAL\DAOs\OrderProductDAO.cs" />
+    <Compile Include="DAL\DAOs\PaymentDAO.cs" />
+    <Compile Include="DAL\DAOs\ProductVariantDiscountDAO.cs" />
+    <Compile Include="DAL\GoogleService\DriveHandler.cs" />
+    <Compile Include="DAL\DAOs\BrandDAO.cs" />
+    <Compile Include="DAL\DAOs\CartProductDAO.cs" />
+    <Compile Include="DAL\DAOs\CategoryDAO.cs" />
+    <Compile Include="DAL\DAOs\CouponDAO.cs" />
+    <Compile Include="DAL\DAOs\CustomerChatDAO.cs" />
+    <Compile Include="DAL\DAOs\DiscountDAO.cs" />
+    <Compile Include="DAL\DAOs\ProductDAO.cs" />
+    <Compile Include="DAL\DAOs\ProductVariantDAO.cs" />
+    <Compile Include="DAL\DAOs\RewardPointDAO.cs" />
+    <Compile Include="DAL\DAOs\RoleDAO.cs" />
+    <Compile Include="DAL\DAOs\UserAddressDAO.cs" />
+    <Compile Include="DAL\DAOs\UserDAO.cs" />
+    <Compile Include="DAL\DAOs\UserReviewDAO.cs" />
+    <Compile Include="DAL\GoogleService\OathLogin.cs" />
+    <Compile Include="GUI\ComponentControls\ChatMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ChatMessageControl.Designer.cs">
+      <DependentUpon>ChatMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ChatUserTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ChatUserTile.Designer.cs">
+      <DependentUpon>ChatUserTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ILazyLoad.cs" />
+    <Compile Include="GUI\ComponentControls\OrderDetailControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\OrderDetailControl.Designer.cs">
+      <DependentUpon>OrderDetailControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\OrderLogControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\OrderLogControl.Designer.cs">
+      <DependentUpon>OrderLogControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ProductReviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ProductReviewControl.Designer.cs">
+      <DependentUpon>ProductReviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ProductVariant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ProductVariant.Designer.cs">
+      <DependentUpon>ProductVariant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\RatingBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\RatingBar.Designer.cs">
+      <DependentUpon>RatingBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\UserAddressControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\UserAddressControl.Designer.cs">
+      <DependentUpon>UserAddressControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\UserOrderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\UserOrderControl.Designer.cs">
+      <DependentUpon>UserOrderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\UserOrderHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\UserOrderHistory.Designer.cs">
+      <DependentUpon>UserOrderHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\UserOrderProductControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\UserOrderProductControl.Designer.cs">
+      <DependentUpon>UserOrderProductControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\UserReviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\UserReviewControl.Designer.cs">
+      <DependentUpon>UserReviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\UserReviewHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\UserReviewHistory.Designer.cs">
+      <DependentUpon>UserReviewHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\UserReviewManagerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\UserReviewManagerControl.Designer.cs">
+      <DependentUpon>UserReviewManagerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\AddressEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\AddressEditorForm.Designer.cs">
+      <DependentUpon>AddressEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\BatchImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\BatchImportForm.Designer.cs">
+      <DependentUpon>BatchImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\BrandEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\BrandEditor.Designer.cs">
+      <DependentUpon>BrandEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\UserAddressPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\UserAddressPicker.Designer.cs">
+      <DependentUpon>UserAddressPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\EditUserProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\EditUserProfileForm.Designer.cs">
+      <DependentUpon>EditUserProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\UserInfoViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\UserInfoViewer.Designer.cs">
+      <DependentUpon>UserInfoViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\Analysis\AdminAnalysis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\Analysis\AdminAnalysis.Designer.cs">
+      <DependentUpon>AdminAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\Manager\BrandManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\Manager\BrandManager.Designer.cs">
+      <DependentUpon>BrandManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\Manager\OrderManagerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\Manager\OrderManagerControl.Designer.cs">
+      <DependentUpon>OrderManagerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\AdminChatSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\AdminChatSupport.Designer.cs">
+      <DependentUpon>AdminChatSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\CategoryEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\CategoryEditor.Designer.cs">
+      <DependentUpon>CategoryEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\CardCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\CardCategory.Designer.cs">
+      <DependentUpon>CardCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\CardProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\CardProduct.Designer.cs">
+      <DependentUpon>CardProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ImagePanelPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ImagePanelPicker.Designer.cs">
+      <DependentUpon>ImagePanelPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\KeyBindingControl.cs" />
+    <Compile Include="GUI\ComponentControls\LoadingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\LoadingControl.Designer.cs">
+      <DependentUpon>LoadingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\BannerMainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\BannerMainControl.Designer.cs">
+      <DependentUpon>BannerMainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\OrderCreateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\OrderCreateControl.Designer.cs">
+      <DependentUpon>OrderCreateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\PaginationSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\PaginationSelector.Designer.cs">
+      <DependentUpon>PaginationSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ProductCartItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ProductCartItem.Designer.cs">
+      <DependentUpon>ProductCartItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ProductEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ProductEditorControl.Designer.cs">
+      <DependentUpon>ProductEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ProductVariantControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ProductVariantControl.Designer.cs">
+      <DependentUpon>ProductVariantControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ProductVariantsManagerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ProductVariantsManagerControl.Designer.cs">
+      <DependentUpon>ProductVariantsManagerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ServiceConfiguration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ServiceConfiguration.Designer.cs">
+      <DependentUpon>ServiceConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\SpecificationManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\SpecificationManager.Designer.cs">
+      <DependentUpon>SpecificationManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\StopAccountControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\StopAccountControl.Designer.cs">
+      <DependentUpon>StopAccountControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ProductViewerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentControls\ProductViewerControl.Designer.cs">
+      <DependentUpon>ProductViewerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\BannerManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\BannerManagerForm.Designer.cs">
+      <DependentUpon>BannerManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\BannerEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\BannerEditorForm.Designer.cs">
+      <DependentUpon>BannerEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\BanUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\BanUserForm.Designer.cs">
+      <DependentUpon>BanUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\CategoryAndBrandPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\CategoryAndBrandPicker.Designer.cs">
+      <DependentUpon>CategoryAndBrandPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\CouponEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\CouponEditor.Designer.cs">
+      <DependentUpon>CouponEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\EulaPublisherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\EulaPublisherForm.Designer.cs">
+      <DependentUpon>EulaPublisherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\CancelOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\CancelOrderForm.Designer.cs">
+      <DependentUpon>CancelOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\Manager\UserAddressManagerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\Manager\UserAddressManagerControl.Designer.cs">
+      <DependentUpon>UserAddressManagerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatternDistinctive\Decorator\PriceCalculator\BaseCartPriceCalculator.cs" />
+    <Compile Include="PatternDistinctive\Decorator\PriceCalculator\CouponDiscountDecorator.cs" />
+    <Compile Include="PatternDistinctive\Decorator\PriceCalculator\IPriceCalculator.cs" />
+    <Compile Include="PatternDistinctive\Decorator\PriceCalculator\PriceAdjustment.cs" />
+    <Compile Include="PatternDistinctive\Decorator\PriceCalculator\PriceCalculatorDecorator.cs" />
+    <Compile Include="PatternDistinctive\Decorator\PriceCalculator\RewardPointsDecorator.cs" />
+    <Compile Include="PatternDistinctive\Facade\BrandFacade.cs" />
+    <Compile Include="PatternDistinctive\Facade\UserFacade.cs" />
+    <Compile Include="PatternDistinctive\Observer\EditUserInfomation\SendUserOTP.cs" />
+    <Compile Include="PatternDistinctive\Observer\EditUserInfomation\IObserver.cs" />
+    <Compile Include="PatternDistinctive\Observer\EditUserInfomation\IProcessing.cs" />
+    <Compile Include="PatternDistinctive\Observer\TaskProgress\TaskProgressWatcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatternDistinctive\Observer\TaskProgress\TaskProgressWatcher.Designer.cs">
+      <DependentUpon>TaskProgressWatcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\UserChatSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\UserChatSupport.Designer.cs">
+      <DependentUpon>UserChatSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\UserDetailInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ComponentForm\UserDetailInfoForm.Designer.cs">
+      <DependentUpon>UserDetailInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ConfirmLoginGoogle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ConfirmLoginGoogle.Designer.cs">
+      <DependentUpon>ConfirmLoginGoogle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\AdminControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\AdminControl.Designer.cs">
+      <DependentUpon>AdminControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\Auth\ChangePasswordControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\Auth\ChangePasswordControl.Designer.cs">
+      <DependentUpon>ChangePasswordControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\Auth\EULA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\Auth\EULA.Designer.cs">
+      <DependentUpon>EULA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\Auth\ForgotPasswordControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\Auth\ForgotPasswordControl.Designer.cs">
+      <DependentUpon>ForgotPasswordControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\Auth\LoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\Auth\LoginControl.Designer.cs">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\Auth\NewPasswordControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\Auth\NewPasswordControl.Designer.cs">
+      <DependentUpon>NewPasswordControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\Auth\SignUpControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\Auth\SignUpControl.Designer.cs">
+      <DependentUpon>SignUpControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\CartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\CartControl.Designer.cs">
+      <DependentUpon>CartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\CategoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\CategoryControl.Designer.cs">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\Manager\CategoryManagerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\Manager\CategoryManagerControl.Designer.cs">
+      <DependentUpon>CategoryManagerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\EmbedControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\EmbedControl.Designer.cs">
+      <DependentUpon>EmbedControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\HomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\HomeControl.Designer.cs">
+      <DependentUpon>HomeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\Manager\CouponManagerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\Manager\CouponManagerControl.Designer.cs">
+      <DependentUpon>CouponManagerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\Manager\ProductManagerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\Manager\ProductManagerControl.Designer.cs">
+      <DependentUpon>ProductManagerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\Manager\UserManagerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\Manager\UserManagerControl.Designer.cs">
+      <DependentUpon>UserManagerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\NoInternetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\NoInternetControl.Designer.cs">
+      <DependentUpon>NoInternetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\SettingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\SettingControl.Designer.cs">
+      <DependentUpon>SettingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\BrowseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\BrowseControl.Designer.cs">
+      <DependentUpon>BrowseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Test\SetUpConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Test\SetUpConfig.Designer.cs">
+      <DependentUpon>SetUpConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Test\RedisConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Test\RedisConfig.Designer.cs">
+      <DependentUpon>RedisConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainControls\UserProfileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\MainControls\UserProfileControl.Designer.cs">
+      <DependentUpon>UserProfileControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Test\TestDrive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Test\TestDrive.Designer.cs">
+      <DependentUpon>TestDrive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatternDistinctive\Builder\PagingJoinQueryBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\PagingQueryBuilder.cs" />
+    <Compile Include="PatternDistinctive\Command\ButtonCommand.cs" />
+    <Compile Include="PatternDistinctive\Command\CheckInternetCommand.cs" />
+    <Compile Include="PatternDistinctive\Command\CommandBase.cs" />
+    <Compile Include="PatternDistinctive\Command\ICommand.cs" />
+    <Compile Include="PatternDistinctive\Command\NetworkWatcherCommand.cs" />
+    <Compile Include="PatternDistinctive\DbAbstractFactory\DatabaseFactory.cs" />
+    <Compile Include="DAL\DAOs\ICrudRepository.cs" />
+    <Compile Include="DAL\Database\RedisHandler.cs" />
+    <Compile Include="PatternDistinctive\Builder\BaseBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\BrandBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\CartProductBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\CategoryBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\CouponBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\CustomerChatBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\DiscountBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\MessageBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\OrderBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\OrderLogBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\OrderProductBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\PaymentBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\ProductBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\ProductVariantBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\ProductVariantDiscountBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\RewardPointBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\RoleBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\UserAddressBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\UserBuilder.cs" />
+    <Compile Include="PatternDistinctive\Builder\DtoBuilder\UserReviewBuilder.cs" />
+    <Compile Include="PatternDistinctive\Decorator\Decreasing.cs" />
+    <Compile Include="PatternDistinctive\Decorator\DefaultUser.cs" />
+    <Compile Include="PatternDistinctive\Decorator\FilterDecorator.cs" />
+    <Compile Include="PatternDistinctive\Decorator\IUser.cs" />
+    <Compile Include="PatternDistinctive\Decorator\ShowAcitiveAccount.cs" />
+    <Compile Include="PatternDistinctive\Decorator\ShowBanAccount.cs" />
+    <Compile Include="PatternDistinctive\Decorator\ShowOnlSixMonthLatest.cs" />
+    <Compile Include="PatternDistinctive\Decorator\SimpleDecoratorFactory.cs" />
+    <Compile Include="PatternDistinctive\Facade\CategoryFacade.cs" />
+    <Compile Include="PatternDistinctive\Flyweight\IProductFlyweight.cs" />
+    <Compile Include="PatternDistinctive\Flyweight\ProductFlyweight.cs" />
+    <Compile Include="PatternDistinctive\Flyweight\ProductFlyweightFactory.cs" />
+    <Compile Include="PatternDistinctive\Observer\Countdown\CountdownEventArgs.cs" />
+    <Compile Include="PatternDistinctive\Observer\Countdown\CountdownTimer.cs" />
+    <Compile Include="PatternDistinctive\SimpleFactory\EmbedControlDecoratorFactory.cs" />
+    <Compile Include="PatternDistinctive\SimpleFactory\MainControlFactory.cs" />
+    <Compile Include="PatternDistinctive\Singleton\Logger.cs" />
+    <Compile Include="PatternDistinctive\State\ConfirmedState.cs" />
+    <Compile Include="PatternDistinctive\State\ConfirmHandler.cs" />
+    <Compile Include="PatternDistinctive\State\IConfirmationState.cs" />
+    <Compile Include="PatternDistinctive\State\NotConfirmedState.cs" />
+    <Compile Include="PatternDistinctive\Strategy\CharacterValidator\AlphabetOnlyCharacterStrategy.cs" />
+    <Compile Include="PatternDistinctive\Strategy\CharacterValidator\BaseCharacterValidationStrategy.cs" />
+    <Compile Include="PatternDistinctive\Strategy\CharacterValidator\NumberOnlyCharacterStrategy.cs" />
+    <Compile Include="PatternDistinctive\Strategy\CharacterValidator\SpecialCharacterOnlyStrategy.cs" />
+    <Compile Include="PatternDistinctive\Strategy\DiscountPercentValidator.cs" />
+    <Compile Include="PatternDistinctive\Strategy\MaxDiscountAmountValidator.cs" />
+    <Compile Include="PatternDistinctive\Strategy\ProductDescriptionValidator.cs" />
+    <Compile Include="PatternDistinctive\Strategy\TemplateIntegerValidator.cs" />
+    <Compile Include="PatternDistinctive\Strategy\SpecKeyValidator.cs" />
+    <Compile Include="PatternDistinctive\Strategy\TextLengthConstraintValidator.cs" />
+    <Compile Include="PatternDistinctive\Strategy\PasswordConfirmValidator.cs" />
+    <Compile Include="PatternDistinctive\TemplateMethod\AddProductOperation.cs" />
+    <Compile Include="PatternDistinctive\TemplateMethod\EditProductOperation.cs" />
+    <Compile Include="PatternDistinctive\TemplateMethod\ProductOperationBase.cs" />
+    <Compile Include="Resources\NetWorking.cs" />
+    <Compile Include="Utilities\ColorUtils.cs" />
+    <Compile Include="Utilities\ControlExtensions.cs" />
+    <Compile Include="Utilities\ExceptionExtensions.cs" />
+    <Compile Include="Utilities\HorizontalDragDropManager.cs" />
+    <Compile Include="Utilities\ImageHelper.cs" />
+    <Compile Include="Utilities\LoginSession.cs" />
+    <Compile Include="Utilities\DeviceHandler.cs" />
+    <Compile Include="Utilities\EmailHandler.cs" />
+    <Compile Include="Utilities\EmailService.cs" />
+    <Compile Include="PatternDistinctive\DbAbstractFactory\MySqlDbFactory.cs" />
+    <Compile Include="DAL\Database\Redis.cs" />
+    <Compile Include="PatternDistinctive\DbAbstractFactory\SqlServerDbFactory.cs" />
+    <Compile Include="CustomControls\AdvancedCombobox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\AdvancedTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\AdvancedTextBox.Designer.cs">
+      <DependentUpon>AdvancedTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ColoredDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ColoredRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\Database\DataProvider.cs" />
+    <Compile Include="GUI\Test\TestEncrypt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Test\TestEncrypt.Designer.cs">
+      <DependentUpon>TestEncrypt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\MySystem.cs" />
+    <Compile Include="Utilities\SimpleFileStore.cs" />
+    <Compile Include="GUI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GUI\Test\DatabaseConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Test\DatabaseConfig.Designer.cs">
+      <DependentUpon>DatabaseConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatternDistinctive\Strategy\EmailVaildator.cs" />
+    <Compile Include="PatternDistinctive\Strategy\BaseValidator.cs" />
+    <Compile Include="PatternDistinctive\Strategy\OtpValidator.cs" />
+    <Compile Include="PatternDistinctive\Strategy\PasswordValidator.cs" />
+    <Compile Include="PatternDistinctive\Strategy\UsernameValidator.cs" />
+    <Compile Include="Utilities\StringUtil.cs" />
+    <Compile Include="Utilities\TaskInfo.cs" />
+    <Compile Include="PatternDistinctive\Observer\TaskProgress\TaskManager.cs" />
+    <Compile Include="Utilities\TaskStatus.cs" />
+    <Compile Include="Utilities\ToolTipHelper.cs" />
+    <EmbeddedResource Include="CustomControls\AdvancedTextBox.resx">
+      <DependentUpon>AdvancedTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\OrderPriceDetailControl.resx">
+      <DependentUpon>OrderPriceDetailControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\ProductVariantPicker.resx">
+      <DependentUpon>ProductVariantPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\CartControlComponent.resx">
+      <DependentUpon>CartControlComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\ChatController.resx">
+      <DependentUpon>ChatController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\BannerControl.resx">
+      <DependentUpon>BannerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\BannerSubControl.resx">
+      <DependentUpon>BannerSubControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\CardSlider.resx">
+      <DependentUpon>CardSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\ToastBox.resx">
+      <DependentUpon>ToastBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\ChatMessageControl.resx">
+      <DependentUpon>ChatMessageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\ChatUserTile.resx">
+      <DependentUpon>ChatUserTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\OrderDetailControl.resx">
+      <DependentUpon>OrderDetailControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\OrderLogControl.resx">
+      <DependentUpon>OrderLogControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\ProductReviewControl.resx">
+      <DependentUpon>ProductReviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\ProductVariant.resx">
+      <DependentUpon>ProductVariant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\RatingBar.resx">
+      <DependentUpon>RatingBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\UserAddressControl.resx">
+      <DependentUpon>UserAddressControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\UserOrderControl.resx">
+      <DependentUpon>UserOrderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\UserOrderHistory.resx">
+      <DependentUpon>UserOrderHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\UserOrderProductControl.resx">
+      <DependentUpon>UserOrderProductControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\UserReviewControl.resx">
+      <DependentUpon>UserReviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\UserReviewHistory.resx">
+      <DependentUpon>UserReviewHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\UserReviewManagerControl.resx">
+      <DependentUpon>UserReviewManagerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\AddressEditorForm.resx">
+      <DependentUpon>AddressEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\BatchImportForm.resx">
+      <DependentUpon>BatchImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\BrandEditor.resx">
+      <DependentUpon>BrandEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\UserInfoViewer.resx">
+      <DependentUpon>UserInfoViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\Analysis\AdminAnalysis.resx">
+      <DependentUpon>AdminAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\Manager\BrandManager.resx">
+      <DependentUpon>BrandManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\Manager\OrderManagerControl.resx">
+      <DependentUpon>OrderManagerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\AdminChatSupport.resx">
+      <DependentUpon>AdminChatSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\CategoryEditor.resx">
+      <DependentUpon>CategoryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\CardCategory.resx">
+      <DependentUpon>CardCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\CardProduct.resx">
+      <DependentUpon>CardProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\ImagePanelPicker.resx">
+      <DependentUpon>ImagePanelPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\LoadingControl.resx">
+      <DependentUpon>LoadingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\BannerMainControl.resx">
+      <DependentUpon>BannerMainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\OrderCreateControl.resx">
+      <DependentUpon>OrderCreateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\PaginationSelector.resx">
+      <DependentUpon>PaginationSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\ProductCartItem.resx">
+      <DependentUpon>ProductCartItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\ProductEditorControl.resx">
+      <DependentUpon>ProductEditorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\ProductVariantControl.resx">
+      <DependentUpon>ProductVariantControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\ProductVariantsManagerControl.resx">
+      <DependentUpon>ProductVariantsManagerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\ProductViewerControl.resx">
+      <DependentUpon>ProductViewerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\ServiceConfiguration.resx">
+      <DependentUpon>ServiceConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\SpecificationManager.resx">
+      <DependentUpon>SpecificationManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentControls\StopAccountControl.resx">
+      <DependentUpon>StopAccountControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\BannerManagerForm.resx">
+      <DependentUpon>BannerManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\BannerEditorForm.resx">
+      <DependentUpon>BannerEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\BanUserForm.resx">
+      <DependentUpon>BanUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\CategoryAndBrandPicker.resx">
+      <DependentUpon>CategoryAndBrandPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\CouponEditor.resx">
+      <DependentUpon>CouponEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\EulaPublisherForm.resx">
+      <DependentUpon>EulaPublisherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\CancelOrderForm.resx">
+      <DependentUpon>CancelOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\Manager\UserAddressManagerControl.resx">
+      <DependentUpon>UserAddressManagerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatternDistinctive\Observer\TaskProgress\TaskProgressWatcher.resx">
+      <DependentUpon>TaskProgressWatcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\UserChatSupport.resx">
+      <DependentUpon>UserChatSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ComponentForm\UserDetailInfoForm.resx">
+      <DependentUpon>UserDetailInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ConfirmLoginGoogle.resx">
+      <DependentUpon>ConfirmLoginGoogle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\AdminControl.resx">
+      <DependentUpon>AdminControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\Auth\ChangePasswordControl.resx">
+      <DependentUpon>ChangePasswordControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\Auth\EULA.resx">
+      <DependentUpon>EULA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\Auth\ForgotPasswordControl.resx">
+      <DependentUpon>ForgotPasswordControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\Auth\LoginControl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\Auth\NewPasswordControl.resx">
+      <DependentUpon>NewPasswordControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\Auth\SignUpControl.resx">
+      <DependentUpon>SignUpControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\CartControl.resx">
+      <DependentUpon>CartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\CategoryControl.resx">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\Manager\CouponManagerControl.resx">
+      <DependentUpon>CouponManagerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\Manager\ProductManagerControl.resx">
+      <DependentUpon>ProductManagerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\Manager\UserManagerControl.resx">
+      <DependentUpon>UserManagerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\Manager\CategoryManagerControl.resx">
+      <DependentUpon>CategoryManagerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\EmbedControl.resx">
+      <DependentUpon>EmbedControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\HomeControl.resx">
+      <DependentUpon>HomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\NoInternetControl.resx">
+      <DependentUpon>NoInternetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\SettingControl.resx">
+      <DependentUpon>SettingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\BrowseControl.resx">
+      <DependentUpon>BrowseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Test\SetUpConfig.resx">
+      <DependentUpon>SetUpConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Test\RedisConfig.resx">
+      <DependentUpon>RedisConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainControls\UserProfileControl.resx">
+      <DependentUpon>UserProfileControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Test\TestDrive.resx">
+      <DependentUpon>TestDrive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="GUI\Test\DatabaseConfig.resx">
+      <DependentUpon>DatabaseConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Test\TestEncrypt.resx">
+      <DependentUpon>TestEncrypt.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Other\.temp" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_design_3s_theme_it.webp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_design_3s_theme_it.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_design_3s_theme_it.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancel_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\auth_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading-icon-614x460.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_loading_gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-data-found.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product_not_found.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_internet_connection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_border-black-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star-gold-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-white-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compose-white-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grocery_store-white-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-black-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-red-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compose-black-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload-black-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets'))" />
+  </Target>
+</Project>

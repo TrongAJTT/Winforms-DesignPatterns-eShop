@@ -1,0 +1,57 @@
+- add-black-32.png
+	- Url: https://www.flaticon.com/free-icon/add_1237946
+	- Author: [scrip](https://www.flaticon.com/authors/srip)
+- admin.png
+	- Url: https://www.flaticon.com/free-icon/software-engineer_6024190
+	- Author: [Freepik](https://www.flaticon.com/authors/freepik)
+- auth_bg.jpg
+	- Url: https://www.freepik.com/free-vector/online-shopping-store-with-mobile-shopping-cart-mail-clouds-realistic-style-vector-illustration_21869807.htm
+	- Author: [bs_k1d](https://www.freepik.com/author/bsk1d)
+- compose-black-24.png
+	- Url: https://www.flaticon.com/free-icon/compose_10747217?term=edit&page=1&position=20&origin=search&related_id=10747217
+	- Author: [Arkinasi](https://www.flaticon.com/authors/arkinasi)
+- compose-white-24.png
+	- Url: https://www.flaticon.com/free-icon/compose_10747217?term=edit&page=1&position=20&origin=search&related_id=10747217
+	- Author: [Arkinasi](https://www.flaticon.com/authors/arkinasi)
+- delete-red-32.png
+	- Url: https://www.flaticon.com/free-icon/delete_6861362?term=delete&page=1&position=2&origin=search&related_id=6861362
+	- Author: [IYAHICON](https://www.flaticon.com/authors/iyahicon)
+- grocery_store-white-32.png
+	- Url: https://www.flaticon.com/free-icon/shopping-cart_1170627?related_id=1170678&origin=search
+	- Author: [Freepik](https://www.flaticon.com/authors/freepik)
+- guest.png
+	- Url: https://www.flaticon.com/free-icon/profile_11476369?term=guest&page=1&position=4&origin=search&related_id=11476369
+	- Author: [Yogs144](https://www.flaticon.com/authors/yogs144)
+- ic_loading_gif
+	- Powered by [loading.io](https://loading.io/) under free license.
+- information.png
+	- Url: https://www.flaticon.com/free-icon/info_13983966
+	- Author: [riajulislam](https://www.flaticon.com/authors/riajulislam)
+- lock-white-24.png
+	- Url: https://www.flaticon.com/free-icon/lock_483408
+	- Author: [Those Icons](https://www.flaticon.com/authors/those-icons)
+- no_internet_connection.png
+	- Url: https://www.flaticon.com/free-icon/no-internet_12581244
+	- Author: [Yudhi Restu](https://www.flaticon.com/authors/yudhi-restu)
+- no-data-found.png
+	- Url: https://www.flaticon.com/free-icon/no-data_17134613?term=no+data&page=1&position=4&origin=search&related_id=17134613
+	- Author: [Freepik](https://www.flaticon.com/authors/freepik)
+- product_not_found.png
+	- Url: https://www.flaticon.com/free-icon/not-found_8480293
+	- Author: [IconMarketPK](https://www.flaticon.com/authors/iconmarketpk)
+- profile.png
+	- Url: https://www.flaticon.com/free-icon/profile_3135715?term=profile&page=1&position=3&origin=search&related_id=3135715
+	- Author: [Freepik](https://www.flaticon.com/authors/freepik)
+- reload-black-32.png
+	- Url: https://www.flaticon.com/free-icon/reload_3580291?term=reload&page=1&position=5&origin=search&related_id=3580291
+	- Author: [mavadee](https://www.flaticon.com/authors/mavadee)
+- star_border-black-64.png
+	- Url: https://www.flaticon.com/free-icon/star_1828970?term=star&page=1&position=6&origin=search&related_id=1828970
+	- Author: [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect)
+- star-gold-64.png
+	- Url: https://www.flaticon.com/free-icon/star_1828884?term=star&related_id=1828884
+	- Author: [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect)
+- warning.png, success.png, info.png, icons8_cancel_25px.png, error.png:
+	- https://laptrinhvb.net/bai-viet/devexpress/---Csharp----Hien-thi-thong-bao-Toast-Message-trong-lap-trinh-Winform/956187c4983d410c.html
+- calendarDark.png, calendarWhite.png
+	- Github repository: [Custom-DateTimePicker-WinForm](https://github.com/RJCodeAdvance/Custom-DateTimePicker-WinForm/tree/main)

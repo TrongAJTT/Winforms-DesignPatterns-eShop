@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnManageMainBanner.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        nAAAAJwBXTUFigAAAkBJREFUSEvF1luITVEYwPExhmGSoZgpIqdMRmgoaprMg+SScSkk5dGDxqMHhtyK
+        eBBPSFHeqBNFkWYkD+JFJ7dc8ySPkkbKaDj+f327TnP22U7OlF2/ztnfrPV9a6+1z1pT15cvNmM37uIH
+        ijUyxwB60GwBkw/iO+7gRo3MYa6P6LWAIzdwDkuwqEbmOI9hDFjAR7qNxXWjdJkL7zDkjfOWx4L4e82X
+        ufDS3GUF/MQhnEIuYqtxEZcz2Gd6SY6KBbbBt+AxlkfsAF7hdYZ+lA6yYoEJyKENjRGbgoVIW9SEfRqi
+        feUCo3GZC/+pAJ8TsQzdaIpYK9ZhUwb7/H2K+LTxTTxAZ8T24AmeZ7DPvGifWWApzuAS2iO2BdeRtjUk
+        TmNGtJ+PFxguK+DF93qMjVvvx2Acxmeoj+a2n4qTOJtaoNqLPhb2FXXDvIDDWAkH6Gubq7XAfrgTD+ED
+        vuIXHP3kpNHINZiELqzwe8RmYgM2lsTm4Ave4yA6sR338Bnr0ZBWwAW9hUfoithePMUzbI7YVvzEMSSL
+        2wi3Gp/iCFrSCnTgBDwf5kbM0V/BVXREbB+cnrXeJxf3bivmdANsKytQ7UV7R+oTHEVrhI37ZOZ02qYZ
+        +KcDh/az8Q2uwXH7Yyfuw7Vxvf6sgVuzR6bHnNPTXoVZcNd1Ud/A/o7aJ/oEj8tr6LaAp78HtMG3SNsG
+        RnqINfDH58h3wKnahVUwufkKFvDfll74JNX+2+I73xOzZQ5/yS1ogj8yN8pCX75Y+A1OJ1CPRCT0eQAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="infoMainBanner.Text" xml:space="preserve">
+    <value>Banner Chính là phần quảng cáo lớn và nổi bật nhất trên trang web, thường được đặt ở vị trí trung tâm hoặc đầu trang. Nó nhằm thu hút sự chú ý ngay lập tức từ khách truy cập, thường giới thiệu các sản phẩm chủ lực, chương trình khuyến mãi lớn hoặc sự kiện đặc biệt. Banner chính không chỉ giúp nâng cao khả năng hiển thị của sản phẩm mà còn thúc đẩy doanh số bán hàng thông qua các ưu đãi hấp dẫn.</value>
+  </data>
+  <data name="titleMainBanner.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnManageEula.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        nAAAAJwBXTUFigAAAkBJREFUSEvF1luITVEYwPExhmGSoZgpIqdMRmgoaprMg+SScSkk5dGDxqMHhtyK
+        eBBPSFHeqBNFkWYkD+JFJ7dc8ySPkkbKaDj+f327TnP22U7OlF2/ztnfrPV9a6+1z1pT15cvNmM37uIH
+        ijUyxwB60GwBkw/iO+7gRo3MYa6P6LWAIzdwDkuwqEbmOI9hDFjAR7qNxXWjdJkL7zDkjfOWx4L4e82X
+        ufDS3GUF/MQhnEIuYqtxEZcz2Gd6SY6KBbbBt+AxlkfsAF7hdYZ+lA6yYoEJyKENjRGbgoVIW9SEfRqi
+        feUCo3GZC/+pAJ8TsQzdaIpYK9ZhUwb7/H2K+LTxTTxAZ8T24AmeZ7DPvGifWWApzuAS2iO2BdeRtjUk
+        TmNGtJ+PFxguK+DF93qMjVvvx2Acxmeoj+a2n4qTOJtaoNqLPhb2FXXDvIDDWAkH6Gubq7XAfrgTD+ED
+        vuIXHP3kpNHINZiELqzwe8RmYgM2lsTm4Ave4yA6sR338Bnr0ZBWwAW9hUfoithePMUzbI7YVvzEMSSL
+        2wi3Gp/iCFrSCnTgBDwf5kbM0V/BVXREbB+cnrXeJxf3bivmdANsKytQ7UV7R+oTHEVrhI37ZOZ02qYZ
+        +KcDh/az8Q2uwXH7Yyfuw7Vxvf6sgVuzR6bHnNPTXoVZcNd1Ud/A/o7aJ/oEj8tr6LaAp78HtMG3SNsG
+        RnqINfDH58h3wKnahVUwufkKFvDfll74JNX+2+I73xOzZQ5/yS1ogj8yN8pCX75Y+A1OJ1CPRCT0eQAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="infoEula.Text" xml:space="preserve">
+    <value>Điều khoản dịch vụ (Terms of Service - ToS) là một tài liệu pháp lý mà người dùng phải đồng ý trước khi sử dụng dịch vụ của một công ty hoặc trang web. Tài liệu này quy định các điều kiện và quy tắc mà người dùng phải tuân thủ khi sử dụng dịch vụ.</value>
+  </data>
+  <data name="titleEula.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANDSURBVFhHvZXd
+        S1NhHMeNuo/oDwiESoygmyi66IUiL4LCpSXddGMbUl2oKGUivhRGNR2aqGWNwtRGZJhT0cF8nfONHV/m
+        ljrnNo+b2zlnbr50ofnrOYdnQ92Z7rjNL3zY89v2+36/nD2wmGASid9li8RSB2I2UVJyB799MEp6JL2E
+        gonEx++PJ6fJTqPz/K204mP44+jrrrjkSaK4pBiPMSKJtI0thcfoiaK8cS63p2N6zkEYTeSoi1keZnlW
+        XLfUqTUYfXNoeL4zDHMUW4cmtFjrYrzAYne6ob6pjzvnSRXQPzLFnYVAuugCtVp9BNvvLbT027dssi6C
+        5PlH7rzfAlOzNhgYGe9XKBSHccTuQkv+AmarE1Kzq7hz7psG0Oqmt5mHAi4AAwRxCkfsLrTkL+CkvfA0
+        Tw4Fsh+QmlUN1gUqIGAvfAUGCf0ZHLG70JK/AIuFpKCjZwxmLI5txqESdgEfpGsOSKcpKHbKFrDDEpEC
+        bECPPg269eKgaAwZ6LuebXssEXsC++XAC0zZKBg3Of306kyg7NJBwVdNwvn05tizD2sun3sgP4njAoVM
+        wiqQ8robLma0BiUuqRTi75U5cFygkIm/QItaB6U1LYJIyGmFojoCEl+q+QskyyD+fogFRg0WaOsiBHE7
+        XwWSsn64masKv8B+SJN1wY1spZ/rmGtZyvWrmc0b8cmyzfiUCgOOCxQy8Rew2mkwzJCCmNOoYL4yKyhk
+        VfY/HMWvrQVqG3sgvfCLIBo/VcNqexkvVF0hOD7nrOAofm0tIBTGYoQ1VQWsdZTzQtUXRa8AbV+AVfUH
+        3mAfggv8ah+CV+WNe/K24ifYlJVcCNMWwSdgRJeqe9CwJ6OaXi7Ao6qGib7OgGAf0fsJ6CVYmuwDen4O
+        GOsMbzhLVO+AD38BfB88nXJYRa+rqgqzqzZ/c1GeS+IofiGTiBRY0TQATVpgesYMxKAW9MP9FxYbikQL
+        316cwFH8QiYRK8DOB/53TNtMXIFlrYKb91OgaauhUCjaDV6iHRjzJDf/EVyA9mbuNA2HUf20sAKs7C73
+        lXHj7MaEcRbCQTdm5MJZhobGYrF9aNIOjxWhxb8+gzBY145MyAHgELbeoZiY/3fQZb+DmHnLAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
+  <data name="btnManageSubBanner.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        nAAAAJwBXTUFigAAAkBJREFUSEvF1luITVEYwPExhmGSoZgpIqdMRmgoaprMg+SScSkk5dGDxqMHhtyK
+        eBBPSFHeqBNFkWYkD+JFJ7dc8ySPkkbKaDj+f327TnP22U7OlF2/ztnfrPV9a6+1z1pT15cvNmM37uIH
+        ijUyxwB60GwBkw/iO+7gRo3MYa6P6LWAIzdwDkuwqEbmOI9hDFjAR7qNxXWjdJkL7zDkjfOWx4L4e82X
+        ufDS3GUF/MQhnEIuYqtxEZcz2Gd6SY6KBbbBt+AxlkfsAF7hdYZ+lA6yYoEJyKENjRGbgoVIW9SEfRqi
+        feUCo3GZC/+pAJ8TsQzdaIpYK9ZhUwb7/H2K+LTxTTxAZ8T24AmeZ7DPvGifWWApzuAS2iO2BdeRtjUk
+        TmNGtJ+PFxguK+DF93qMjVvvx2Acxmeoj+a2n4qTOJtaoNqLPhb2FXXDvIDDWAkH6Gubq7XAfrgTD+ED
+        vuIXHP3kpNHINZiELqzwe8RmYgM2lsTm4Ave4yA6sR338Bnr0ZBWwAW9hUfoithePMUzbI7YVvzEMSSL
+        2wi3Gp/iCFrSCnTgBDwf5kbM0V/BVXREbB+cnrXeJxf3bivmdANsKytQ7UV7R+oTHEVrhI37ZOZ02qYZ
+        +KcDh/az8Q2uwXH7Yyfuw7Vxvf6sgVuzR6bHnNPTXoVZcNd1Ud/A/o7aJ/oEj8tr6LaAp78HtMG3SNsG
+        RnqINfDH58h3wKnahVUwufkKFvDfll74JNX+2+I73xOzZQ5/yS1ogj8yN8pCX75Y+A1OJ1CPRCT0eQAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="infoSubBanner.Text" xml:space="preserve">
+    <value>Banner Phụ là các phần quảng cáo nhỏ hơn, thường được bố trí ở các vị trí khác trên trang như bên cạnh hoặc dưới banner chính. Mặc dù không chiếm diện tích lớn, banner phụ vẫn đóng vai trò quan trọng trong việc cung cấp thông tin bổ sung về các sản phẩm khác, khuyến mãi nhỏ hơn hoặc các thông tin liên quan. Chúng giúp làm phong phú thêm trải nghiệm người dùng mà không làm rối mắt, đồng thời hỗ trợ cho các chiến dịch quảng cáo lớn hơn từ banner chính.</value>
+  </data>
+  <data name="titleSubBanner.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AABJRU5ErkJggg==
+</value>
+  </data>
+</root>
