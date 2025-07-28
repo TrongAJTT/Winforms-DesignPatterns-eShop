@@ -18,14 +18,14 @@ Dự án phục vụ cho mục đích học thuật và sử dụng nội bộ p
 
 <div align="center">
     <div>
-        <img src="https://github.com/user-attachments/assets/dd9c8bee-f27b-43ce-89e2-d3f55f4c5fe6" width="45%" />
-        <img src="https://github.com/user-attachments/assets/a6639667-9c9a-4ee4-94f2-63b5821d06d9" width="45%" />
-        <img src="https://github.com/user-attachments/assets/c9a65f2e-64df-49e2-8186-0a23cd45d8ef" width="45%" />
-        <img src="https://github.com/user-attachments/assets/c3a27638-1481-4922-802e-1c0b26c420f9" width="45%" />
-        <img src="https://github.com/user-attachments/assets/31373a0b-5404-4112-af17-09a46d08116e" width="45%" />
-        <img src="https://github.com/user-attachments/assets/3ad62e38-d990-4a02-a925-2dae41ea1c66" width="45%" />
-        <img src="https://github.com/user-attachments/assets/260f790c-855e-4901-89f5-b67c83c0a059" width="45%" />
-        <img src="https://github.com/user-attachments/assets/417f3730-0f20-4d46-a20f-8ca1a4f399cc" width="45%" />
+        <img src="https://github.com/user-attachments/assets/31bb9150-f3bb-4134-8a40-c5ba4e48ed7c" width="45%" />
+        <img src="https://github.com/user-attachments/assets/8e6230c6-0f4c-4c97-9ed2-7a863efb5f63" width="45%" />
+        <img src="https://github.com/user-attachments/assets/387815f5-faf9-43de-9d9d-c776387372ba" width="45%" />
+        <img src="https://github.com/user-attachments/assets/582754a4-814f-4b90-819d-f7564b319c08" width="45%" />
+        <img src="https://github.com/user-attachments/assets/68813c1a-3b4f-4ade-8722-4f2d7d337e4c" width="45%" />
+        <img src="https://github.com/user-attachments/assets/ef6f9fae-796c-4fdc-a972-b9aa5f58c297" width="45%" />
+        <img src="https://github.com/user-attachments/assets/12e4600c-b1da-4bd0-b1a2-fc2fbfbdfdfc" width="45%" />
+        <img src="https://github.com/user-attachments/assets/dd2d4cae-7fd0-4d8c-bf95-d910f81ec83e" width="45%" />
     </div>
 </div>
 
